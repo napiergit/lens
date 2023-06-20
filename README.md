@@ -12,7 +12,7 @@
 This is a manual step
 
 ### 5. Insert the images into Weaviate
-```./import_images.sh```
+```python import_images.sh```
 
 
 # Run

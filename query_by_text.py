@@ -10,14 +10,14 @@ client = weaviate.Client(
 )
 
 nearText = {
-  "concepts": ["acting silly"],
+  "concepts": ["dog"],
   "certainty": 0.6,
-  "moveAwayFrom": {
-    "concepts": ["child"],
-    "force": 0.45
-  },
+  #  "moveAwayFrom": {
+  #    "concepts": [""],
+  #    "force": 0.45
+  #  },
   "moveTo": {
-    "concepts": ["man"],
+    "concepts": ["puppy", "people"],
     "force": 0.85
   }
 }

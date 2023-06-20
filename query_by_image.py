@@ -9,7 +9,7 @@ client = weaviate.Client(
     url="http://localhost:8080"
 )
 
-nearImage = {"image": "./query_images/henning-witzel-ukvgqriuOgo-unsplash.jpg"}
+nearImage = {"image": "./query_images/city.jpg"}
 
 response = (
     client.query
@@ -19,4 +19,8 @@ response = (
     .do()
 )
 
-print(json.dumps(response, indent=4))
+#  print(json.dumps(response, indent=4))
+base64_img = response.get("data").get("Get").get("MySchemaName")[0].get("image")
+
+im = Image.open(BytesIO(base64.b64decode(base64_img)))
+im.show()
