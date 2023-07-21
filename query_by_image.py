@@ -9,7 +9,7 @@ client = weaviate.Client(
     url="http://localhost:8080"
 )
 
-nearImage = {"image": "./query_images/city.jpg"}
+nearImage = {"image": "./query_images/lily.jpg"}
 
 response = (
     client.query
